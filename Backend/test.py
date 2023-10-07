@@ -12,7 +12,7 @@ def startLara(url, owner):
     s = Service('../chromedriver/chromedriver')
     driver = webdriver.Chrome(service = s)
 
-    #open url in Chrome
+    # open url in Chrome
     driver.get(url)
 
     time.sleep(3)
@@ -38,10 +38,3 @@ def startLara(url, owner):
     # TODO GET LAST NAME FROM THIS RESIDENT
 
 startLara(lara_url, owner1)
-
-
-# Jacob's Notes 10-6-23
-# Download selenium, chromedriver, and openpyxl to setup my environment
-# Put a chrome driver in the project file so it is not dependent on system-specific paths 
-#   May have an issue because everyone using this program could possibly not have the same version of chrome, for now we are using "chromedriver mac-arm64 Version: 117.0.5938.149"
-#   Only idea I have of getting around this issue is to run a Virtual Machine when we start selling this so the chromedriver is consistent
