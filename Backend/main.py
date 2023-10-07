@@ -14,7 +14,7 @@ from datetime import datetime
 
 # LANDVISION
 def startBot(username, password, url, location):
-    s = Service('/Users/christophertrippel/PycharmProjects/pythonProject/chromedriver')
+    s = Service('../chromedriver/chromedriver')
     driver = webdriver.Chrome(service=s)
     list = []
 
@@ -95,7 +95,7 @@ def startBot(username, password, url, location):
 
 # LARA
 def startLara(url, owner):
-    s = Service('/Users/christophertrippel/PycharmProjects/pythonProject/chromedriver')
+    s = Service('../chromedriver/chromedriver')
     driver = webdriver.Chrome(service=s)
 
     # opening the website  in chrome.
@@ -130,7 +130,7 @@ def startLara(url, owner):
 
 # LEXIS NEXIS
 def startLexisNexis(username, password, url, first, last):
-    s = Service('/Users/christophertrippel/PycharmProjects/pythonProject/chromedriver')
+    s = Service('../chromedriver/chromedriver')
     driver = webdriver.Chrome(service=s)
 
     # time.sleep(5)
@@ -252,3 +252,12 @@ startLexisNexis(nexisUser, nexisPass, nexis_url, "DAVID", "KAMARA")
 # date_time = now.strftime("%m/%d/%Y, %H:%M:%S")
 #
 # workbook.save(filename="/Users/christophertrippel/PycharmProjects/pythonProject/output.xlsx")
+
+
+# Jacob's Notes 10-6-23
+# Download selenium, chromedriver, and openpyxl to setup my environment
+# Line 231 ERROR is from having the wrong username or password (Need Yianni to send accurate login info)
+# Line 134 ERROR SOLVED
+#   TODO need to put a chrome driver in the project file so it is not dependent on system-specific paths 
+#   May have an issue because everyone using this program could possibly not have the same version of chrome, for now we are using "chromedriver mac-arm64 Version: 117.0.5938.149"
+#   Only idea I have of getting around this issue is to run a Virtual Machine when we start selling this so the chromedriver is consistent
