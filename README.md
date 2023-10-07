@@ -34,3 +34,7 @@ Follow Yianni's explanation video and then scale to a similar platform like "CoS
     * Installed the chromedriver in the project directory so it is dependent on the project path rather than dependent on system-specific paths
         * May have an issue because everyone using this program could possibly not have the same version of chrome, for now we are using "chromedriver mac-arm64 Version: 117.0.5938.149"
         * Only idea I have of getting around this issue is to run this code on a Virtual Machine so the chromedriver and system are consistent
+        * Trippel said we could possibly use Docker to avoid the issue above
+* ### 10-07-2023
+    * Updated test.py
+        * startLara can be called with the owners name we are looking for and then push those names to an excel sheet without duplicating them
