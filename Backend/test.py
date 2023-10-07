@@ -8,11 +8,11 @@ owner1 = "G.M.K., L.L.C."
 
 # LARA
 def startLara(url, owner):
-    # find chromedriver on machine
+    # Find chromedriver on machine
     s = Service('../chromedriver/chromedriver')
     driver = webdriver.Chrome(service = s)
 
-    # open url in Chrome
+    # Open url in chrome
     driver.get(url)
 
     time.sleep(3)
