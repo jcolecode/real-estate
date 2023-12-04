@@ -24,7 +24,7 @@ def startLara(url, owner):
 
     # Open url in chrome
     driver.get(url)
-    time.sleep(3)
+    time.sleep(3) # TODO instead of sleep do webdriver.wait()
 
     driver.find_element(By.ID, "txtEntityName").send_keys(owner)
     time.sleep(3)
